@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  html{direction:rtl;scroll-behavior:smooth} body{@apply m-0 bg-brand-black font-arabic text-brand-white antialiased;font-family:'Cairo','Noto Sans Arabic',sans-serif} h1,h2,h3,h4{@apply font-arabic font-bold} ::selection{@apply bg-gold-primary text-brand-black} button,a{-webkit-tap-highlight-color:transparent}
+}
+@layer components {
+ .text-gold-gradient{@apply bg-gold-gradient bg-clip-text text-transparent;background-size:200% auto}
+ .card-luxury{@apply rounded-sm border border-brand-black-lighter bg-brand-black-light transition-all duration-500 hover:border-gold-primary/50 hover:shadow-[0_0_30px_rgba(201,168,76,0.15)]}
+ .btn-primary{@apply rounded-sm bg-gold-gradient px-8 py-3 font-bold text-brand-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] active:scale-95}
+ .btn-outline{@apply rounded-sm border-2 border-gold-primary px-8 py-3 text-gold-primary transition-all duration-300 hover:bg-gold-primary hover:text-brand-black}
+ .section-padding{@apply px-5 py-20 sm:px-8 lg:px-12 lg:py-28 xl:px-16}
+ .gold-line{@apply mx-auto h-0.5 w-16 bg-gold-gradient}
+ .nav-link{@apply relative py-2 text-sm text-brand-white-muted transition-colors hover:text-brand-white}.nav-link:after{content:'';@apply absolute bottom-0 right-0 h-px w-0 bg-gold-primary transition-all duration-300}.nav-link:hover:after{@apply w-full}
+ .carousel-arrow{@apply absolute top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-gold-primary/30 text-gold-light backdrop-blur transition-all hover:border-gold-primary hover:bg-gold-primary/15 md:grid}.reveal{@apply translate-y-7 opacity-0 transition-all duration-700}.reveal.is-visible{@apply translate-y-0 opacity-100}
+}
+@layer utilities {
+ .text-shadow-gold{text-shadow:0 0 20px rgba(201,168,76,.3)}
+}
+@keyframes progress{from{width:0}to{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
