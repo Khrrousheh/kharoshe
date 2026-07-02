@@ -15,7 +15,7 @@ concurrency:
   # Queue deployments instead of interrupting one that already owns the
   # GitHub Pages deployment lock.
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
